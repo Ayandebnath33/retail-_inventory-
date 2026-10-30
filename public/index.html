@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Retail Inventory & Sales</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main id="login-screen" class="login-wrap">
+    <form id="login-form" class="login-card">
+      <div class="brand-mark">R</div>
+      <p class="eyebrow">RETAIL OPERATIONS</p>
+      <h1>Inventory & Sales</h1>
+      <p class="muted">Sign in to manage your store.</p>
+      <label>Email<input name="email" type="email" value="admin@retail.local" required autocomplete="username"></label>
+      <label>Password<input name="password" type="password" value="Admin@12345" required autocomplete="current-password"></label>
+      <button class="primary full" type="submit">Sign in</button>
+      <p id="login-error" class="error"></p>
+      <p class="tiny">Demo credentials are shown for first-run academic setup. Change them before real use.</p>
+    </form>
+  </main>
+
+  <div id="app-screen" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark small">R</span><div><strong>RetailFlow</strong><small>STOCK & SALES</small></div></div>
+      <nav id="nav">
+        <button class="nav-item active" data-view="dashboard">▦ <span>Dashboard</span></button>
+        <button class="nav-item" data-view="products">▤ <span>Products</span></button>
+        <button class="nav-item" data-view="categories">▧ <span>Categories</span></button>
+        <button class="nav-item" data-view="suppliers">♧ <span>Suppliers</span></button>
+        <button class="nav-item" data-view="warehouses">⌂ <span>Warehouses</span></button>
+        <button class="nav-item" data-view="customers">♙ <span>Customers</span></button>
+        <button class="nav-item" data-view="inventory">▥ <span>Inventory</span></button>
+        <button class="nav-item" data-view="purchases">↘ <span>Purchases</span></button>
+        <button class="nav-item" data-view="sales">↗ <span>Sales</span></button>
+        <button class="nav-item" data-view="reports">▥ <span>Reports</span></button>
+      </nav>
+      <div class="sidebar-bottom"><span class="status-dot"></span> System operational</div>
+    </aside>
+    <section class="main-panel">
+      <header class="topbar">
+        <div><p class="eyebrow">STORE MANAGEMENT / <span id="crumb">OVERVIEW</span></p><h2 id="page-title">Dashboard overview</h2></div>
+        <div class="user-area"><div class="avatar">A</div><div><strong id="user-name">Administrator</strong><small id="user-role">Admin</small></div><button id="logout" class="ghost">Log out</button></div>
+      </header>
+      <div id="notice" class="notice hidden"></div>
+      <section id="view" class="content"></section>
+    </section>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
